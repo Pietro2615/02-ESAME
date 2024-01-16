@@ -1,0 +1,32 @@
+[
+    {
+        "id" : 1,
+        "class" : "cliente",
+        "nome" : "CLIENTE 1"
+    },
+    {
+        "id" : 2,
+        "class" : "cliente",
+        "nome" : "CLIENTE 2"
+    },
+    {
+        "id" : 3,
+        "class" : "cliente",
+        "nome" : "CLIENTE 3"
+    },
+    {
+        "id" : 4,
+        "class" : "cliente",
+        "nome" : "CLIENTE 4"
+    },
+    {
+        "id" : 5,
+        "class" : "cliente",
+        "nome" : "CLIENTE 5"
+    },
+    {
+        "id" : 6,
+        "class" : "cliente",
+        "nome" : "CLIENTE 6"
+    }
+]

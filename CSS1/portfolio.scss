@@ -1,0 +1,135 @@
+@import "variabili";
+@import "footer";
+/* parte iniziale */
+body{
+    font-family: $carattere;
+    background-color: rgb(255, 170, 0);
+}
+header{
+    background-image: url(../img/sfondodefinitivo.jpg);
+    background-size: cover;
+    padding: 30px;
+    margin: 0;
+    h1{
+        text-align: center;
+        color: bisque;
+    }
+}
+
+/* navbar con media queries */
+nav{
+    background-color: rgb(255, 170, 0);
+    padding: 10px;
+    text-align: center;
+    a.nav{
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        @media screen and (max-width: 426px){
+            font-size: smaller;
+        }
+        &:hover{
+            color: bisque;
+        }
+    }
+}
+/* testo */
+p#testo{
+    padding: 12px;
+    font-size:1em;
+    line-height: $interlinea;
+    border-radius: 10px;
+    background-color: rgb(255, 170, 0);
+    color: rgb(0, 0, 0);
+}
+/* i miei progetti con media queries*/
+h2{
+    text-align: center;
+    color: rgb(19, 19, 43);
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    @media screen and (max-width: 426px){
+        flex-direction: column;
+    }
+    section{
+        border-radius: 10px;
+        padding-bottom: 200px;
+        width: 40%;
+        margin: 10px;
+        background-image: url(../img/sfondoprogetti.jpg);
+        background-size: cover;
+        @media screen and (max-width: 426px){
+            width: 95%;
+        }
+        &:hover{
+            opacity: 0.8;
+        }
+        h3{
+            text-align: center;
+            font-size: 1.5em;
+        }
+        div.bottone{
+            background-color: rgb(19, 19, 43);
+            padding: 10px;
+            margin-left: 30%;
+            margin-right: 30%;
+            font-size: 1.5em;
+            border-radius: 10px;
+        }
+        a.sezione{
+            text-decoration: none;
+            color: bisque;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+/* aside */
+aside{
+    color: bisque;
+    background-color: rgb(19, 19, 43);
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding: 10px;
+    text-align: center;
+    a.aside{
+        text-decoration: none;
+        color: bisque;
+        margin: 5px;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+/* footer con media queries */
+.riga1{
+    display: $dis;
+    flex-direction: $flex-dir;
+    background-color: $bgcolor;
+    color: $color;
+    @media screen and (max-width: 426px){
+        display: flex;
+        flex-direction: column;
+    }
+    .colonna1{
+        width: $width;
+        text-align: $txt-align;
+        @media screen and (max-width: 426px){
+            width: 100%;
+            padding-bottom: 5px;
+        }
+        a.footer{
+            text-decoration: $txt-decor;
+            color: $color;
+            &:hover{
+                text-decoration: $txt-decorhover;
+            }
+        }
+    }
+}

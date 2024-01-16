@@ -1,0 +1,112 @@
+@import "variabili";
+/* parte iniziale */
+body{
+    font-family: $carattere;
+    background-color: rgb(255, 170, 0);
+}
+header{
+    background-image: url(../img/sfondodefinitivo.jpg);
+    background-size: cover;
+    padding: 30px;
+    margin: 0;
+    h1{
+        text-align: center;
+        color: bisque;
+    }
+}
+/* navbar con media queries*/
+nav{
+    background-color: rgb(255, 170, 0);
+    padding: 10px;
+    text-align: center;
+    a.nav{
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        @media (max-width: 426px){
+            font-size: smaller;
+        }
+        &:hover{
+            color: bisque;
+        }
+    }
+}
+/* iframe */
+h2{
+    color: rgb(19, 19, 43);
+    padding: 10px;
+}
+div.iframe{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%;
+    .responsiveiframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+}
+/* contatti miei */
+article{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    ul{
+        flex: 40%;
+        font-size: 1.2em;
+        li{
+            padding: 10px;
+        }
+    }
+} 
+/* form con media queries*/
+main{
+    background-color: bisque;
+    div.totale{
+        display: flex;
+        flex-direction: row;
+        @media (max-width: 426px){
+            display: flex;
+            flex-direction: column;
+        }
+        div.col{
+            flex: 50%;
+            padding: 10px;
+        }
+    }
+    div input{
+        padding: 5px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        border-radius: 3px;
+    }
+    textarea{
+        margin-left: 10px;
+        @media screen and (max-width: 321px){
+            width: 90%;
+        }
+    }
+    label{
+        padding-left: 5px;
+    }
+    section{
+        margin-bottom: 10px;
+    }
+}
+/* button */
+input[type=submit]{
+    margin: 10px;
+    font-size: larger;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    &:hover{
+        background-color: #224623;
+    }
+}
