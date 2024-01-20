@@ -1,31 +1,48 @@
 [
     {
         "id" : 1,
-        "class" : "cliente",
-        "nome" : "CLIENTE 1"
+        "img" : "img/sfondoprogetti.jpg",
+        "alt" : "foto progetto"
     },
     {
         "id" : 2,
-        "class" : "cliente",
-        "nome" : "CLIENTE 2"
+        "testo" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, dicta rem quisquam laudantium nihil placeat beatae labore commodi dolorem voluptate sequi, saepe quae adipisci. Earum excepturi dolore nisi placeat ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi vitae doloremque vero in? Ipsam dolore rerum dicta, vitae doloremque enim voluptas, ullam et perferendis totam sapiente quaerat neque. Perspiciatis, similique? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, nobis! Explicabo dolor amet soluta repudiandae atque quam laboriosam culpa temporibus vitae quibusdam eos, reprehenderit, dolorem voluptatem ratione fugit. Doloremque, earum."
     },
     {
         "id" : 3,
-        "class" : "cliente",
-        "nome" : "CLIENTE 3"
+        "bottone" : "Contattami per un preventivo"
     },
     {
         "id" : 4,
-        "class" : "cliente",
-        "nome" : "CLIENTE 4"
+        "h" : "CLIENTI RECENTI"
     },
     {
         "id" : 5,
         "class" : "cliente",
-        "nome" : "CLIENTE 5"
+        "nome" : "CLIENTE 1"
     },
     {
         "id" : 6,
+        "class" : "cliente",
+        "nome" : "CLIENTE 2"
+    },
+    {
+        "id" : 7,
+        "class" : "cliente",
+        "nome" : "CLIENTE 3"
+    },
+    {
+        "id" : 8,
+        "class" : "cliente",
+        "nome" : "CLIENTE 4"
+    },
+    {
+        "id" : 9,
+        "class" : "cliente",
+        "nome" : "CLIENTE 5"
+    },
+    {
+        "id" : 10,
         "class" : "cliente",
         "nome" : "CLIENTE 6"
     }
