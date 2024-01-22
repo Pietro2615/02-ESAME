@@ -23,13 +23,26 @@ $arr = json_decode(UT::leggiTesto($file));
             <a href="contatti.php" class="nav">Contatti</a>
         </nav>
     </header>
+    <main>
+        <?php
+        $percorso_file = 'progetto2.json';
+        $json2string = file_get_contents($percorso_file);
+        $dati = json_decode(UT::leggiTesto($json2string));
+
+        echo '<img src="img/sfondoprogetti.jpg" alt="foto progetto">';
+        printf ('<p id="testo">%s</p>', $dati->text);
+        ?>
+    </main>
+    <button><a id="bottone" href="contatti.php">Contattami per un preventivo</a></button>
+    <h2>CLIENTI RECENTI</h2>
+    <div class="clienti">
 <?php
 foreach ($arr as $link){
     $n = $link->id;
-    printf('
-    <main><img src="%s" alt="%s"><p id="testo">%s</p></main><button><a id="bottone" href="contatti.php">%s</a></button><h2>%s</h2><div class="clienti"><div class="%s"><b>%s</b></div></div>', $link->img, $link->alt, $link->testo, $link->bottone, $link->h, $link->class, $link->nome);
+    printf('<div class="%s"><b>%s</b></div>', $link->class, $link->nome);
 }
 ?>
+    </div>
 <aside>
     <a class="aside" href="index.php">Home page</a>
 </aside>

@@ -3,7 +3,7 @@ require_once('utility.php');
 ini_set("auto_detect_line_endings", true);
 use Classi\Utility as UT; 
 $inviato = UT::richiestaHTTP("inviato");
-$inviato = ($inviato == null || $inviato != 1) ? false : true;
+$inviato = ($inviato == null || $inviato != 1) ? true : false;
 
 //recuperare i dati
 if ($inviato) {
@@ -15,7 +15,7 @@ if ($inviato) {
     $età = UT::richiestaHTTP("età");
     $testo = UT::richiestaHTTP("testo");
     
-    $clsErrore = 'class="errore" ';
+    $clsErrore =' class="errore" ';
     
     //validare i dati
     if (($nome !="") && UT::controllaRangeStringa($nome, 0, 25)) {
@@ -122,13 +122,13 @@ if ($inviato) {
         <div class="totale">
         <div class="col">
         <div><label for="nome">Nome *</label></div>
-        <div><input type="text" <?php echo $clsErroreNome; ?> name="nome" id="nome" maxlength="25" placeholder="Inserisci il tuo nome" required value="<?php echo $nome; ?>"></div>
+        <div><input type="text" <?php echo $clsErroreNome; ?> name="nome" id="nome" required maxlength="25" placeholder="Inserisci il tuo nome" value="<?php echo $nome; ?>"></div>
         <div><label for="cognome">Cognome *</label></div>
-        <div><input type="text" <?php echo $clsErroreCognome; ?> name="cognome" id="cognome" maxlength="25" placeholder="Inserisci il tuo cognome" required value="<?php echo $cognome; ?>"></div>
+        <div><input type="text" <?php echo $clsErroreCognome; ?> name="cognome" id="cognome" required maxlength="25" placeholder="Inserisci il tuo cognome" value="<?php echo $cognome; ?>"></div>
         <div><label for="mail">Email *</label></div>
-        <div><input type="email" <?php echo $clsErroreEmail; ?> name="email" id="email" minlength="10" maxlength="40" placeholder="Inserisci la tua Email" required value="<?php echo $email; ?>"></div>
+        <div><input type="email" <?php echo $clsErroreEmail; ?> name="email" id="email" minlength="10" required maxlength="100" placeholder="Inserisci la tua Email" value="<?php echo $email; ?>"></div>
         <div><label for="telefono">Telefono *</label></div>
-        <div><input type="telefono" <?php echo $clsErroreTelefono; ?> name="telefono" id="telefono" minlength="5" maxlength="20" placeholder="Inserisci il tuo telefono" required value="<?php echo $telefono; ?>"></div>
+        <div><input type="telefono" <?php echo $clsErroreTelefono; ?> name="telefono" id="telefono" minlength="5" required maxlength="20" placeholder="Inserisci il tuo telefono" value="<?php echo $telefono; ?>"></div>
         <div><label for="età">Età *</label></div>
         <div><input type="text" <?php echo $clsErroreEtà; ?> name="età" id="età" minlength="0" maxlength="3" placeholder=" Inserisci la tua età" required value="<?php echo $età; ?>"></div>
         <section><input type="checkbox" name="dati" id="dati" required>
